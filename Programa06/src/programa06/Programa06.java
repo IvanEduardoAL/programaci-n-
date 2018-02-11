@@ -17,27 +17,41 @@ public class Programa06 {
     public static void main(String[] args) {
         // TODO code application logic here
          Scanner teclado = new Scanner(System.in);
-         System.out.println("Las horas se ingresan en formato 24 horas");
-         System.out.println("ingresa  la hora  entrada");
-         int hora= teclado. nextInt();
+         System.out.println("Las horas se ingresan en formato 24 horas\nIngresa  la hora  entrada");
+         //System.out.println("ingresa  la hora  entrada");
+         int horae= teclado. nextInt();
          System.out.println("ingresa los  minutos entrada");
-         int min= teclado.nextInt();
+         int mine= teclado.nextInt();
          System.out.println("ingresa los  segundos entada");
-         int seg= teclado.nextInt();
-         System.out.println("hora de entada:"+" "+hora+":"+min+":"+seg);
+         int sege= teclado.nextInt();
+         System.out.println("hora de entada: "+horae+":"+mine+":"+sege);
          System.out.println("ingresa  la hora  salida");
          int horas= teclado. nextInt();
          System.out.println("ingresa los  minutos salida");
          int mins= teclado.nextInt();
          System.out.println("ingresa los  segundos salida");
          int segs= teclado.nextInt();
-         System.out.println("hora de salida:"+" "+horas+":"+mins+":"+segs);
+         System.out.println("hora de salida: "+horas+":"+mins+":"+segs);
+         if (sege>segs){
+         segs+=60;
+         mins--;
+         }
+         if (mine>mins){
+        mins+=60;
+         horas--;
+         }
+         int segt=segs-sege;
+         int mint=mins-mine;
          
-         int horatotal= Math.abs(horas-hora) ;
-         int mintotal=Math.abs( mins-min);
-         int segtotal= Math.abs(segs-seg);
-          System.out.println("Tiempo total:"+horatotal+":"+mintotal+":"+segtotal);
+         int horat= horas-horae;
+         
+         System.out.println("tiempo total:"+horat+":"+mint+":"+segt);
+         
+         //int horatotal= Math.abs(horas-hora) ;
+         //int mintotal=Math.abs( mins-min);
+         //int segtotal= Math.abs(segs-seg);
+          //System.out.println("Tiempo total:"+horatotal+":"+mintotal+":"+segtotal);
           
     }
-    
-}
+}   
+
